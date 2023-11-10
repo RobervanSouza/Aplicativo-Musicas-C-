@@ -1,31 +1,52 @@
 ﻿//Apicativo musica
 
-Banda banda1 = new Banda();
-banda1.Nome = "banda1";
 
-Album albumArtista1 = new Album();
-albumArtista1.Nome = "Album musica 1";
+//Banda banda1 = new Banda("banda1");
 
-Musica musica1 = new Musica(banda1);
-musica1.Nome = "musica1";
-musica1.Duracao = 212;
+//Album albumArtista1 = new Album("Album musica 1");
+
+//Musica musica1 = new Musica(banda1, "musica 1")
+//{
+//    Duracao = 212,
+//    Disponivel = true,
+//};
+//Musica musica2 = new Musica(banda1, "musica 2")
+//{
+//    Duracao = 212,
+//    Disponivel = true,
+//};
+//Musica musica3 = new Musica(banda1, "musica 3")
+//{
+//    Duracao = 212,
+//    Disponivel = false,
+//};
+
+//albumArtista1.AdicinarMusica(musica1);
+//albumArtista1.AdicinarMusica(musica2);
+//albumArtista1.AdicinarMusica(musica3);
+//albumArtista1.ExibirMusicasAlbum();
+//musica1.ExibirFichaMusicas();
+//banda1.AdicionarAlbum(albumArtista1);
+//banda1.ExibirDiscografia();
 
 
-Musica musica2 = new Musica(banda1);
-musica2.Nome = "musica2";
-musica2.Duracao = 313;
+// ################ Desafios Epsodios ####################
 
-Musica musica3 = new Musica(banda1);
-musica3.Nome = "musica3";
-musica3.Duracao = 414;
+Episodio episodio1 = new Episodio(1, "tecnicas ", 45);
+episodio1.AdicionarConvidado("robervan");
+episodio1.AdicionarConvidado("alice");
+//Console.WriteLine(episodio1.Resumo);
 
-albumArtista1.AdicinarMusica(musica1);
-albumArtista1.AdicinarMusica(musica2);
-albumArtista1.AdicinarMusica(musica3);
-albumArtista1.ExibirMusicasAlbum();
-banda1.AdicionarAlbum(albumArtista1);
-banda1.ExibirDiscografia();
+Episodio episodio2 = new Episodio(1, " boas vindas ", 45);
+episodio2.AdicionarConvidado("auriene");
+episodio2.AdicionarConvidado("beatris");
+//Console.WriteLine(episodio2.Resumo);
 
+
+PodCast podCast = new("PodCast", "robervan Souza");
+podCast.AdicionarEpisodios(episodio1);
+podCast.AdicionarEpisodios(episodio2);
+podCast.ExibirDetalhes();
 
 
 
